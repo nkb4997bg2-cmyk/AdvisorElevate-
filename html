@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AdvisorElevate – AI Intelligence for Human Advisors</title>
+
+  <!-- Meta -->
+  <meta name="description" content="AdvisorElevate — AI-powered advisory intelligence: pricing, trust portal, ops panel, predictive engines, recession radar, SDR automations, compliance tools and more.">
+  <meta name="theme-color" content="#00c4ff">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/styles.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- 🔷 HEADER -->
+<header class="ae-header container">
+  <div class="logo">AdvisorElevate</div>
+  <nav>
+    <a href="#pricing">Pricing</a>
+    <a href="#trust">Trust</a>
+    <a href="#features">Features</a>
+    <a href="#" onclick="openPortal()">Portal</a>
+  </nav>
+</header>
+
+
+<!-- 🔷 HERO -->
+<section class="hero container">
+  <h1>AI Intelligence Infrastructure for Human Advisors</h1>
+  <p class="sub">Real-time insights, predictive engines, compliance automation, recession radar, and the world’s first AI SDR for advisors — all in one platform.</p>
+  <div class="hero-btns">
+    <button class="cta" onclick="scrollToSection('pricing')">View Pricing</button>
+    <button class="cta ghost" onclick="openPortal()">Launch Panel</button>
+  </div>
+
+  <div class="holo-preview">
+    <img src="/public/holographic_core.png" alt="AI Core Visualization">
+  </div>
+</section>
+
+
+<!-- 🔷 VALUE STACK -->
+<section id="features" class="container features">
+  <h2>Everything Advisors Need — In One Intelligence Layer</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <i data-lucide="brain-circuit"></i>
+      <h3>AI Core Engine</h3>
+      <p>Dynamic intelligence powering pricing behavior analysis, compliance, SDR automation, and predictive insights.</p>
+    </div>
+
+    <div class="feature-card">
+      <i data-lucide="chart-line"></i>
+      <h3>Predictive Mode</h3>
+      <p>ARR forecasting, client intent prediction, risk scoring, and trend mapping using linear regression + internal heuristics.</p>
+    </div>
+
+    <div class="feature-card">
+      <i data-lucide="radar"></i>
+      <h3>Recession Radar</h3>
+      <p>Live FRED integration, yield curve signals, Sahm rule detection, GDP trends, and 6-month forecast modeling.</p>
+    </div>
+
+    <div class="feature-card">
+      <i data-lucide="shield-check"></i>
+      <h3>Compliance + Ethics</h3>
+      <p>Ethics log, Fairness Dashboard, anomaly detection, calibration checklist, and immutable trust ledger.</p>
+    </div>
+
+    <div class="feature-card">
+      <i data-lucide="bot-message-square"></i>
+      <h3>AI SDR System</h3>
+      <p>Automated outbound, qualification, nurturing, follow-ups, and meeting booking engine for advisors.</p>
+    </div>
+
+    <div class="feature-card">
+      <i data-lucide="network"></i>
+      <h3>Advisor Network</h3>
+      <p>Profiles, AI-enhanced reputation, badges, and a private community of elevated advisors.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🔷 PRICING -->
+<section id="pricing" class="pricing container">
+  <h2>Pricing Tiers</h2>
+  <p class="sub">Start free. Scale into intelligence.</p>
+
+  <div class="price-grid">
+
+    <!-- Freemium -->
+    <div class="price-card">
+      <h3>Freemium</h3>
+      <div class="price">$0</div>
+      <ul>
+        <li>AI Concierge</li>
+        <li>Basic Content Generator</li>
+        <li>3 Insights / Day</li>
+        <li>Freemium Branding</li>
+      </ul>
+      <button onclick="openPortal()" class="cta">Start Free</button>
+    </div>
+
+    <!-- Starter -->
+    <div class="price-card active">
+      <h3>Starter</h3>
+      <div class="price">$49/mo</div>
+      <ul>
+        <li>Full Content Engine</li>
+        <li>Predictive Mode (Lite)</li>
+        <li>Advisor Dashboard</li>
+        <li>Basic Compliance Scanner</li>
+      </ul>
+      <button onclick="subscribe('starter')" class="cta">Choose Starter</button>
+    </div>
+
+    <!-- Pro -->
+    <div class="price-card">
+      <h3>Pro</h3>
+      <div class="price">$199/mo</div>
+      <ul>
+        <li>Everything in Starter</li>
+        <li>AI SDR System</li>
+        <li>Recession Radar</li>
+        <li>ARR Forecasting</li>
+        <li>Ops Panel Access</li>
+      </ul>
+      <button onclick="subscribe('pro')" class="cta">Choose Pro</button>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="price-card">
+      <h3>Enterprise</h3>
+      <div class="price">$999+/mo</div>
+      <ul>
+        <li>White-Label</li>
+        <li>Custom AI Agents</li>
+        <li>Full Compliance Suite</li>
+        <li>Priority Support</li>
+      </ul>
+      <button onclick="contactSales()" class="cta ghost">Contact Sales</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 🔷 TRUST PORTAL PREVIEW -->
+<section id="trust" class="trust container">
+  <h2>Trust & Transparency</h2>
+  <p class="sub">Audits • Ethics Logs • Model Fairness • Risk Indicators • Public Ledger</p>
+
+  <button onclick="location.href='/trust.html'" class="cta">View Trust Portal</button>
+</section>
+
+
+<!-- 🔷 PORTAL LOGIN GATEWAY (Hidden) -->
+<div id="portal-gate" class="modal hidden">
+  <div class="modal-box">
+    <h3>Login to AdvisorElevate</h3>
+    <input id="login-email" type="email" placeholder="Email" />
+    <input id="login-pass" type="password" placeholder="Password" />
+    <button class="cta" onclick="login()">Login</button>
+    <button class="cta ghost" onclick="closePortal()">Cancel</button>
+  </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="/scripts/app.js"></script>
+<script src="/scripts/auth.js"></script>
+<script src="/scripts/predictive.js"></script>
+<script src="/scripts/recession.js"></script>
+<script src="/scripts/sdr.js"></script>
+<script src="/scripts/freemium.js"></script>
+
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
